@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#myCanvas {
+  border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+<canvas id="myCanvas" width="300" height="150"></canvas>
+
+<script>
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+
+// Draw the roof
+ctx.beginPath();
+ctx.moveTo(100, 25);
+ctx.lineTo(150, 75);
+ctx.lineTo(50, 75);
+ctx.closePath();
+ctx.fillStyle = "red";
+ctx.fill();
+
+// Draw the body of the house
+ctx.beginPath();
+ctx.rect(50, 75, 100, 100);
+ctx.closePath();
+ctx.fillStyle = "yellow";
+ctx.fill();
+
+// Draw the door
+ctx.beginPath();
+ctx.rect(75, 100, 50, 75);
+ctx.closePath();
+ctx.fillStyle = "brown";
+ctx.fill();
+
+// Draw the window
+ctx.beginPath();
+ctx.rect(125, 110, 25, 25);
+ctx.closePath();
+ctx.fillStyle = "blue";
+ctx.fill();
+</script> 
+
+</body>
+</html> 
